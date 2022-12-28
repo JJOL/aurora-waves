@@ -1,0 +1,38 @@
+
+
+
+
+# Setup WIFI
+# Setup SSH
+
+# Setup WS2812B controller
+
+
+
+
+# Setup Bluetooth (https://descubrearduino.com/wifi-bluetooth-raspberry-pi/)
+sudo apt-get install pi-bluetooth
+# Connect to Speaker (https://www.digikey.com/en/maker/blogs/raspberry-pi-wi-fi-bluetooth-setup-how-to-configure-your-pi-4-model-b-3-model-b)
+
+# Setup Sounddevice
+pip install sounddevice
+sudo apt install libportaudio2
+pip install soundfile
+sudo apt-get install libsndfile1-dev
+pip install numpy
+
+sudo apt uninstall pulseaudio
+sudo apt install pulseaudio
+sudo apt install pulseaudio-utils
+sudo apt install pulseaudio-module-bluetooth
+
+bluetoothctl
+power on
+agent on
+scan on
+pair <BT MAC>
+trust <BT MAC>
+connect <BT MAC>
+
+// Play Audio Script
+
